@@ -9,6 +9,7 @@ var geoScienceControllers = angular.module('geoScienceApp.controllers', []);
 geoScienceControllers.controller('ViewOncCtrl', ['$scope', 'SurveyService',
 function($scope, SurveyService) {
    $scope.markers = SurveyService.getMarkers();
+
 }]);
 
 /**
@@ -25,6 +26,7 @@ function($scope) {
    $scope.uploadResult = function(content, completed) {
       if (completed && content.length > 0) {
          var response = JSON.parse(content);
+         $scope.siteSurvey.imageUrl = response.imageUrl;
       }
       else {
          // Could do some cool stuff here...
@@ -33,4 +35,7 @@ function($scope) {
       }
    };
 
+   $scope.saveMarker = function() {
+      alert("Saving site survey with title [" + $scope.siteSurvey.title + "] and descrription [" + $scope.siteSurvey.description + "] and imageUrl [" + $scope.siteSurvey.imageUrl + "]");
+   }
 }]);
