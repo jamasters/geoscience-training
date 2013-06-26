@@ -6,9 +6,9 @@ var geoScienceControllers = angular.module('geoScienceApp.controllers', []);
  * ViewOncCtrl is bound to the map display view that manages the retrieval of the site survey dataset and the
  * user requesting to add a new site survey.
  */
-geoScienceControllers.controller('ViewOncCtrl', ['$scope',
-function($scope) {
-
+geoScienceControllers.controller('ViewOncCtrl', ['$scope', 'SurveyService',
+function($scope, SurveyService) {
+   $scope.markers = SurveyService.getMarkers();
 }]);
 
 /**
@@ -17,5 +17,20 @@ function($scope) {
  */
 geoScienceControllers.controller('ViewTwoCtrl', ['$scope',
 function($scope) {
+
+   $scope.siteSurvey = {};
+
+   // Handle the file upload result. Store the relative resource url for future
+   // reference.
+   $scope.uploadResult = function(content, completed) {
+      if (completed && content.length > 0) {
+         var response = JSON.parse(content);
+      }
+      else {
+         // Could do some cool stuff here...
+         // 1. ignore content and adjust your model to show/hide UI snippets; or
+         // 2. show content as an _operation progress_ information. Progress bar for large file uploads.
+      }
+   };
 
 }]);

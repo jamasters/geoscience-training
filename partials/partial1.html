@@ -41,8 +41,26 @@
       </ul>
    </div>
    <div class="span9">
-      <div class="alert alert-success text-center">
-         The map should go here!!!
-      </div>
+      <table class="table table-striped">
+         <thead>
+            <tr>
+               <th>Title</th>
+               <th>Description</th>
+               <th class="hidden-phone">Latitude</th>
+               <th class="hidden-phone">Longitude</th>
+               <th class="hidden-phone">Image</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="marker in markers">
+               <td>{{marker.title}}</td>
+               <td>{{marker.description}}</td>
+               <td class="hidden-phone">{{marker.lat}}</td>
+               <td class="hidden-phone">{{marker.lng}}</td>
+               <td class="hidden-phone">{{marker.imageUrl}}</td>
+            </tr>
+         </tbody>
+      </table>
+      <a href="#/view2" class="btn btn-primary pull-right">Add New Site Survey <i class="icon-plus icon-white"></i></a>
    </div>
 </div>
