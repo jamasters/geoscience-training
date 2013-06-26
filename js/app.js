@@ -7,7 +7,7 @@ function($routeProvider) {
       templateUrl : 'partials/partial1.html',
       controller : 'ViewOncCtrl'
    });
-   $routeProvider.when('/view2', {
+   $routeProvider.when('/view2/:latitude/:longitude', {
       templateUrl : 'partials/partial2.html',
       controller : 'ViewTwoCtrl'
    });

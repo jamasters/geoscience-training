@@ -15,31 +15,21 @@ geoScienceServices.value('version', '0.1');
  */
 geoScienceServices.factory("SurveyService", ['$resource',
 function($resource) {
-   var serverApi = {
-      getMarkers : function() {
-         var markers = [{
-            "lat" : "-35.28948774935103",
-            "lng" : "149.12103652954102",
-            "imageUrl" : "img/upload/test.png",
-            "title" : "Test Survey Title",
-            "description" : "Test Survey Description"
-         },{"lat" : "-35.28948774935103",
-            "lng" : "149.12103652954102",
-            "imageUrl" : "img/upload/test.png",
-            "title" : "Another Survey Title",
-            "description" : "Another Survey Description"
-         },
-         {"lat" : "-35.28948774935103",
-            "lng" : "149.12103652954102",
-            "imageUrl" : "img/upload/test.png",
-            "title" : "Yet Another Survey",
-            "description" : "Yet Another Description"
+   var serverApi = $resource("/:action", {}, {
+      saveMarker : {
+         method : "POST",
+         params : {
+            action : "marker"
          }
-         
-         ]
-         return markers;
+      },
+      getMarkers : {
+         method : "GET",
+         isArray : true,
+         params : {
+            action : "markers"
+         }
       }
-   };
+   });
 
    return serverApi;
 }]);
