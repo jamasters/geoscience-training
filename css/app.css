@@ -1,6 +1,32 @@
 /* app css stylesheet */
 
-body {
-   padding-top: 60px;
-   padding-bottom: 40px;
+html {
+    height: 100%;
+}
+body, html {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.splash {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #fff;
+    background-image: -moz-linear-gradient(top, #FF8A01, #C2520B);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF8A01), to(#C2520B));
+    background-image: -webkit-linear-gradient(top, #FF8A01, #C2520B);
+    background-image: -o-linear-gradient(top, #FF8A01, #C2520B);
+    background-image: linear-gradient(to bottom, #FF8A01, #C2520B);
+}
+
+.map {
+    height: 500px;
+    border: 1px solid #000;
+}
+
+.title {
+    color: #fff;
 }

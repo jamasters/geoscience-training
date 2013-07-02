@@ -1,30 +1,89 @@
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (min-width: 979px) {
+   body {
+      padding-top: 50px;
+   }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+   html {
+      height: 100%;
+   }
+   body, html {
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+   html {
+      height: 100%;
+   }
+   body, html {
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+   }
+
+   .map {
+      height: 175px;
+   }
+
+   .container-fluid {
+      padding-right: 20px;
+      padding-left: 20px;
+   }
+
+   .btn-round {
+      margin: 0px;
+   }
+
+   .navbar-fixed-bottom {
+      margin-top: 18px;
+      position: fixed;
+   }
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-   body {
-      font-variant: small-caps;
-      letter-spacing: 2px;
+   html {
+      height: 100%;
+   }
+   body, html {
+      min-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding: 0;
    }
 
-   .btn {
-      font-variant: small-caps;
-      letter-spacing: 1px;
+   .map {
+      height: 225px;
    }
 
-   legend {
-      font-size: 16px;
-      font-weight: bold;
+   .navbar {
+      margin-bottom: 5px;
+   }
+
+   .container-fluid {
+      padding-right: 20px;
+      padding-left: 20px;
+   }
+
+   .btn-round {
+      margin: 0px;
+   }
+
+   .navbar-fixed-bottom {
+      margin-top: 18px;
+      position: fixed;
    }
 }

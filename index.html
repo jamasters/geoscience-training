@@ -1,50 +1,37 @@
-<!doctype html>
-<html lang="en" ng-app="geoScienceApp">
+<!DOCTYPE html>
+<html>
    <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
       <title>Site Survey</title>
 
       <link rel="stylesheet" href="css/app.css"/>
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.min.css">
-      <link rel="stylesheet" href="lib/bootstrap-fileupload/bootstrap-fileupload.css">
-      <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+      <link rel="stylesheet" href="css/bootstrap-override.css">
       <link rel="stylesheet" href="css/app-responsive.css">
 
    </head>
-   <body>
-
-      <div class="navbar navbar-inverse navbar-fixed-top">
-         <div class="navbar-inner">
-            <div class="container-fluid">
-               <a class="brand span12 text-center" href="#/view1">Site Survey</a>
+   <body class="splash">
+      <div class="container-fluid">
+         <div class="row-fluid">
+            <div class="span12 text-center">
+               <img src="img/logo.gif" width="225" height="160"/>
+            </div>
+         </div>
+         <div class="row-fluid">
+            <h3 class="text-center title">Site Survey</h3>
+         </div>
+         <div class="row-fluid">
+            <div class="text-center">
+               <a class="btn btn-large btn-round" href="site-survey.html">
+                  START
+               </a>
             </div>
          </div>
       </div>
 
-      <div class="container-fluid">
-         <div ng-view />
-      </div>
-      </div>
-
       <script src="lib/jquery/jquery-1.10.1.min.js"></script>
       <script src="lib/bootstrap/js/bootstrap.js"></script>
-      <script src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-      <script src="lib/leaflet/leaflet.js"></script>
-      <script src="lib/underscore.min.js"></script>
-
-      <script src="lib/angular/angular.js"></script>
-
-      <script src="lib/angular/angular-resource.js"></script>
-
-      <script src="js/app.js"></script>
-      <script src="js/services.js"></script>
-      <script src="js/controllers.js"></script>
-      <script src="js/filters.js"></script>
-      <script src="js/directives.js"></script>
-      <script src="lib/leaflet/angular-leaflet-directive.js"></script>
-      <script src="lib/ng-upload.js"></script>
-
    </body>
 </html>

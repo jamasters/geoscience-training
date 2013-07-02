@@ -10,15 +10,14 @@
                </div>
                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
                <div>
-                  <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+                  <span class="btn btn-file"><span class="fileupload-new">Select Image</span><span class="fileupload-exists">Change</span>
                      <input type="file" name="image"/>
                   </span>
                   <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
 
-                  <button type="submit" class="btn btn-primary fileupload-exists" upload-submit="uploadResult(content, completed)">
+                  <button type="submit" class="btn btn-custom fileupload-exists" upload-submit="uploadResult(content, completed)">
                      Upload
                   </button>
-
                </div>
             </div>
          </fieldset>
@@ -27,8 +26,8 @@
 </div>
 
 <div class="row-fluid" ng-show="siteSurvey.imageUrl">
-   <div class="alert alert-success span12">
-      Image uploaded successfully.
+   <div class="alert alert-success span12 text-center">
+      Image uploaded OK.
    </div>
 </div>
 
@@ -37,7 +36,7 @@
       <form ng-submit="saveMarker()">
          <fieldset>
             <legend>
-               Add Site Survey
+               Add Site Survey Photo
             </legend>
             <input class="span12" type="hidden" id="siteSurvey.imageUrl" ng-model="siteSurvey.imageUrl" required readonly>
             <label>Latitude</label>
@@ -48,8 +47,8 @@
             <input class="span12" type="text" id="siteSurvey.title" ng-model="siteSurvey.title" required>
             <label>Description</label>
             <textarea class="span12" id="siteSurvey.description" rows="5" ng-model="siteSurvey.description" required></textarea>
-            <button id="surveySubmit" type="submit" class="btn btn-large btn-primary btn-block">
-               Submit
+            <button id="surveySubmit" type="submit" class="btn btn-custom btn-large pull-right" style="margin-bottom: 50px;">
+               Save
             </button>
          </fieldset>
       </form>

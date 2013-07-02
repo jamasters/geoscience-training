@@ -6,7 +6,7 @@ var geoScienceControllers = angular.module('geoScienceApp.controllers', []);
  * ViewOncCtrl is bound to the map display view that manages the retrieval of the site survey dataset and the
  * user requesting to add a new site survey.
  */
-geoScienceControllers.controller('ViewOncCtrl', ['$scope', '$location', 'SurveyService',
+geoScienceControllers.controller('SurveysCtrl', ['$scope', '$location', 'SurveyService',
 function($scope, $location, SurveyService) {
 
    // Retrieve existing markers from the persistent store.
@@ -17,7 +17,7 @@ function($scope, $location, SurveyService) {
    // This function is passed through to the mapping directive to customise functionality when the
    // map is clicked.
    $scope.clickedFunction = function(e) {
-      $location.url("/view2/" + e.latlng.lat + "/" + e.latlng.lng);
+      $location.url("/add-survey/" + e.latlng.lat + "/" + e.latlng.lng);
    }
    // Center the map somewhere near the center of Australia.
    $scope.center = {
@@ -32,7 +32,7 @@ function($scope, $location, SurveyService) {
  * View Two Controller is boud to the add site survey view and manages the upload of of a site image as well as recording the
  * site survey data to the persistent store.
  */
-geoScienceControllers.controller('ViewTwoCtrl', ['$scope', '$location', '$routeParams', 'SurveyService',
+geoScienceControllers.controller('AddSurveyCtrl', ['$scope', '$location', '$routeParams', 'SurveyService',
 function($scope, $location, $routeParams, SurveyService) {
 
    $scope.siteSurvey = {};
@@ -61,9 +61,21 @@ function($scope, $location, $routeParams, SurveyService) {
     */
    $scope.saveMarker = function() {
       SurveyService.saveMarker({}, $scope.siteSurvey, function(response) {
-         $location.url("/view1");
+         $location.url("/surveys");
       }, function(error) {
          alert("Error")
       });
    }
+}]);
+
+geoScienceControllers.controller('EmailCtrl', ['$scope', '$location',
+function($scope, $location) {
+}]);
+
+geoScienceControllers.controller('NewsCtrl', ['$scope', '$location',
+function($scope, $location) {
+}]);
+
+geoScienceControllers.controller('WeatherCtrl', ['$scope', '$location',
+function($scope, $location) {
 }]);

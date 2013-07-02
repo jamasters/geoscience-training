@@ -5,7 +5,7 @@
 describe('Site Survey', function() {
 
    beforeEach(function() {
-      browser().navigateTo('../../index.html');
+      browser().navigateTo('../../site-survey.html');
    });
 
    // Make sure that the default route is in place.
